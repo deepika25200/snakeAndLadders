@@ -1,0 +1,5 @@
+<div class="cont">
+    <div *ngFor="let box of boxes" class="box" [attr.id]="'b' + box">
+      <p *ngIf="box === 1 || box === 2" [attr.id]="'p' + (box === 1 ? 1 : 2)" #player></p>
+    </div>
+  </div>

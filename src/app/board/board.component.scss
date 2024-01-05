@@ -1,0 +1,44 @@
+.cont {
+    display: grid;
+    grid-template-columns: repeat(10, 2fr);
+    width: 680px; /* Set the total width of the grid */
+  height: 680px;
+    margin: 60px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    .box {
+      width: 60px;
+      height: 60px;
+      border: 1px solid black;
+    }
+  }
+  .cont::before {
+    position: relative;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+    background-position: 8px -615px; /* top left corner */
+  /* z-index: -1; */
+  margin: 0;
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    top: 0px;
+    left: 0;
+    width: 720px;
+    height: 720px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+    background-size: cover;
+    background-position: right 20px bottom 20px;
+    background-repeat: no-repeat;
+    z-index:-1; /* Send it to the back */
+  }
+  #p1,
+  #p2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgb(236, 82, 82);
+    position: relative;
+    border: 3px solid black;
+  
+    /* position: absolute; */
+  }

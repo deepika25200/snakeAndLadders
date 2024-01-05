@@ -1,0 +1,155 @@
+// .cont {
+//     display: grid;
+//     grid-template-columns: repeat(10, 50px); /* Adjust the number and size of columns as needed */
+//     place-content: center;
+//     height: 100vh; /* Adjust the height based on your requirements */
+//     gap: 5px;
+//     margin: 20px;
+//   }
+//       .cont {
+//     background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     /* Add any additional styling you need for the container */
+//   } 
+// .cont {
+//     display: grid;
+//     grid-template-columns: repeat(10, 50px); /* Adjust the number and size of columns as needed */
+//     place-content: center;
+//     height: 100vh; /* Adjust the height based on your requirements */
+//     gap: 5px;
+//     margin: 20px;
+//     position: relative; /* Add this to make sure the absolute positioning works relative to this container */
+//   }
+  
+//   .cont::before {
+//     content: "";
+//     position: absolute;
+//     top: 120px; /* Adjust the top margin as needed */
+//     left: 340px; /* Adjust the left margin as needed */
+//     width: 600px; /* Adjust the width as needed */
+//     height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
+//     background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     z-index: -1; /* Send it to the back */
+//   }
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+.cont {
+    display: grid;
+    grid-template-columns: repeat(10, 2fr);
+    width: 680px; /* Set the total width of the grid */
+  height: 680px;
+    margin: 60px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    .box {
+      width: 60px;
+      height: 60px;
+      border: 1px solid black;
+    }
+  }
+  .cont::before {
+    position: relative;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+    background-position: 8px -615px; /* top left corner */
+  /* z-index: -1; */
+  margin: 0;
+    content: "";
+    position: absolute;
+    bottom: 100px;
+    top: 0px;
+    left: 0;
+    width: 720px;
+    height: 720px;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/00/64/13/25/1000_F_64132507_om0JQcdQH2xhIL8ToNgEZMpQQmZaHq4w.jpg");
+    background-size: cover;
+    background-position: right 20px bottom 20px;
+    background-repeat: no-repeat;
+    z-index:-1; /* Send it to the back */
+  }
+  #p1,
+#p2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  position: relative;
+  border: 3px solid black;
+
+  /* position: absolute; */
+}
+#p1 {
+    position: relative;
+    top: 620px;
+    transition: all linear 0.5s;
+    /* top: 0; */
+    left: -200px;
+    z-index: 2;
+    background-color: rgb(46, 243, 82);
+  }
+  
+  #p2 {
+    z-index: 2;
+    position: relative;
+    top: 620px;
+    left: -135px;
+    transition: all linear 0.5s;
+    background-color: rgb(196, 8, 8);
+  }
+#diceCont {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    font-size: 2rem;
+    z-index: 99;
+  }
+  #diceBtn {
+    z-index: 99;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(75, 140, 197);
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  @media (max-width: 1250px) {
+    
+    #diceCont {
+      display: flex;
+      place-items: none;
+      top: 92vh;
+      left: 36vw;
+      border: 2px solid red;
+    }
+    #diceBtn {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 1250px) {
+    
+    #diceCont {
+      display: flex;
+      place-items: none;
+      top: 99vh;
+      left: 10vw;
+      /* border: 2px solid red; */
+    }
+    #diceBtn {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }

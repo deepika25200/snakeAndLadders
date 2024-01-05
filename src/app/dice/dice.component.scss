@@ -1,0 +1,46 @@
+#diceCont {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    font-size: 2rem;
+    z-index: 99;
+  }
+  #diceBtn {
+    z-index: 99;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(75, 140, 197);
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  @media (max-width: 1250px) {
+    
+    #diceCont {
+      display: flex;
+      place-items: none;
+      top: 92vh;
+      left: 36vw;
+      border: 2px solid red;
+    }
+    #diceBtn {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 1250px) {
+    
+    #diceCont {
+      display: flex;
+      place-items: none;
+      top: 99vh;
+      left: 10vw;
+      /* border: 2px solid red; */
+    }
+    #diceBtn {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }

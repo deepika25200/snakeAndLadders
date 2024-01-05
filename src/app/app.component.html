@@ -1,0 +1,7 @@
+<app-dice (diceRolled)="onDiceRolled($event)"></app-dice>
+<div class="cont">
+  <div *ngFor="let box of boxes" class="box" [attr.id]="'b' + box">
+     <p #player1 *ngIf="box === 1" [attr.id]="'p1' "></p>
+     <p #player2 *ngIf="box === 2" [attr.id]="'p2'"></p>
+  </div>
+</div>
